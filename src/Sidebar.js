@@ -31,7 +31,7 @@ export default function Sidebar() {
                 </div>
             </div>
 
-            <div class="sidebar__chats">
+            <div className="sidebar__chats">
                 <SidebarChat />
                 <SidebarChat />
                 <SidebarChat />
