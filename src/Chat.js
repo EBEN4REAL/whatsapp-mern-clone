@@ -63,6 +63,8 @@ export default function Chat({messages}) {
                         className="messageInput"
                         placeholder="Type a message"
                         type="text"
+                        value={input}
+                        onChange={(e) => setInput(e.target.value) }
                     />
                     <button className="sendButton" onClick={sendMessage} type="submit">
                         Send Message
