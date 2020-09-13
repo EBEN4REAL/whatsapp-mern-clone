@@ -12,10 +12,9 @@ import axios from './axios'
 export default function Chat({messages}) {
     const [input, setInput] = useState("")
     const sendMessage = async (e) => {
-        alert();
         e.preventDefault();
         await axios.post('/messages/create', {
-            messae: input,
+            message: input,
             name: "Segun",
             timestamp: new Date().toUTCString(),
             received: false
@@ -60,7 +59,14 @@ export default function Chat({messages}) {
                     <AttachFile />
                 </IconButton>
                <form>
-                   <
+                    <input 
+                        className="messageInput"
+                        placeholder="Type a message"
+                        type="text"
+                    />
+                    <button className="sendButton" onClick={sendMessage} type="submit">
+                        Send Message
+                    </button>
                </form>
                 <IconButton>
                     <MicIcon  />
