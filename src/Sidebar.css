@@ -6,7 +6,7 @@
 .sidebar__header {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 8px;
     border-right: 1px solid lightgray;
     min-width: 10vw;
     align-items: center;

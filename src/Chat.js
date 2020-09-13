@@ -26,9 +26,6 @@ export default function Chat() {
                         <SearchOutlinedIcon />
                     </IconButton>
                     <IconButton>
-                        <AttachFile />
-                    </IconButton>
-                    <IconButton>
                         <MoreVert />
                     </IconButton>
                 </div>
@@ -36,21 +33,21 @@ export default function Chat() {
 
             <div className="chat__body">
                 <p className="chat__message">
-                    <span className="chat_name">Eben</span>
+                    <span className="chat_name">Eben</span><br></br>
                     This is a message
                     <span className="chat_timestamp">
                         {new Date().toUTCString()}
                     </span>
                 </p>
                 <p className="chat__message chat__receiver">
-                    <span className="chat_name">Eben</span>
+                    <span className="chat_name">Eben</span><br></br>
                     This is a message
                     <span className="chat_timestamp">
                         {new Date().toUTCString()}
                     </span>
                 </p>
                 <p className="chat__message ">
-                    <span className="chat_name">Eben</span>
+                    <span className="chat_name">Eben</span><br></br>
                     This is a message
                     <span className="chat_timestamp">
                         {new Date().toUTCString()}
@@ -58,7 +55,12 @@ export default function Chat() {
                 </p>
             </div>
             <div className="chat__footer">
-                <InsertEmoticon />
+                <IconButton>
+                    <InsertEmoticon />
+                </IconButton>
+                <IconButton>
+                    <AttachFile />
+                </IconButton>
                 <input 
                     className="messageInput"
                     placeholder="Type a message"
@@ -67,7 +69,9 @@ export default function Chat() {
                 <button className="sendButton" onClick={sendMessage} type="submit">
                     Send Message
                 </button>
-                <MicIcon  />
+                <IconButton>
+                    <MicIcon  />
+                </IconButton>
             </div>
         </div>
     )
